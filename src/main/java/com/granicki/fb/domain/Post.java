@@ -7,11 +7,12 @@ import java.util.List;
  * Created by wojciechgranicki on 29.05.2017.
  */
 
-public class Post {
+public class Post extends DomainObject {
+
     private User author;
-    private Date creationDate;
+    private Date created;
     private String title;
-    private String description;
+    private String content;
     private List<Comment> comments;
 
 
@@ -23,12 +24,28 @@ public class Post {
         this.author = author;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Date getCreated() {
+        return created;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public List<Comment> getComments() {
